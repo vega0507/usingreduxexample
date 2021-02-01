@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import ClientForm from  './components/ClientForm';
+import ClientList from  './components/ClientList';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container spacing={1}>
+    <Grid item xs={12}>
+        <center>
+        <Typography variant="h4" color="primary">
+            React - Redux Example
+        </Typography>
+        </center>
+        <br/>
+    </Grid>
+    <Grid item xs={1}/>
+    <Grid item xs={10}>                
+        <Grid container spacing={1}>
+            <Grid item  xs={12}>
+                <ClientForm/>
+            </Grid>
+            <Grid item  xs={12}>
+                <ClientList/>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Grid item xs={1}/>
+    </Grid>
   );
 }
 
